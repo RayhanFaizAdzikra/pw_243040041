@@ -1,4 +1,4 @@
-<?php
+<?ph
 session_start();
 $error = "";
 
@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    if ($username === "Hery" && $password === "123") {
+    if ($username === "rayhan" && $password === "123") {
         $_SESSION['loggedin'] = true;
 
         exit();
