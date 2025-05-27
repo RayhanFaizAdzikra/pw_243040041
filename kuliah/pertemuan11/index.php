@@ -1,6 +1,6 @@
 <?php
 // Koneksi ke database
-$conn = mysqli_connect('localhost', 'root', '', 'pw2024_243040041');
+$conn = mysqli_connect ('localhost', 'root', '', 'pw2024_243040041');
 // Query ke tabel mahasiswa
 $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
 // Simpan data ke dalam array
