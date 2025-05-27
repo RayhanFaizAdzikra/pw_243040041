@@ -1,13 +1,4 @@
 <?php
-// Koneksi ke database
-$conn = mysqli_connect ('localhost', 'root', '', 'pw2024_243040041');
-// Query ke tabel mahasiswa
-$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
-// Simpan data ke dalam array
-$rows = [];
-while($row = mysqli_fetch_assoc($result)) {
-    $rows[] = $row;
-}
 //  Masukkan ke variabel mahasiswa
 $mahasiswa = $rows;
 ?>
@@ -33,9 +24,10 @@ $mahasiswa = $rows;
       <th>Gambar</th>
       <th>Aksi</th>
     </tr>
+    <?php $i = 1; ?>
     <?php foreach($mahasiswa as $mhs) : ?>
     <tr>
-      <td><?= $mhs['id'] ?></td>
+      <td><?= $i++; ?></td>
       <td><?= $mhs['nama'] ?></td>
       <td><?= $mhs['nim'] ?></td>
       <td><?= $mhs['email'] ?></td>
